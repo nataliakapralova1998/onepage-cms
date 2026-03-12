@@ -1,38 +1,39 @@
+import { useTranslations } from "next-intl";
 import SectionLabel from "@/components/shared/SectionLabel";
 
-const steps = [
-  {
-    num: "01",
-    title: "Pick your",
-    em: "slug",
-    desc: "Choose a unique URL that represents you. Your name, your brand, your studio — whatever fits.",
-  },
-  {
-    num: "02",
-    title: "Build your",
-    em: "page",
-    desc: "Add your headline, description, and a call-to-action. Everything looks great out of the box.",
-  },
-  {
-    num: "03",
-    title: "Pay $1,",
-    em: "go live",
-    desc: "One dollar. Your page is live forever. Share anywhere — Instagram, business card, email.",
-  },
-];
+interface Step {
+  num: string;
+  title: string;
+  desc: string;
+}
 
-export default function HowItWorks() {
+interface HowItWorksProps {
+  label?: string;
+  steps?: Step[];
+}
+
+export default function HowItWorks({ label, steps }: HowItWorksProps) {
+  const t = useTranslations("howItWorks");
+
+  const stepKeys = ["pickSlug", "buildPage", "goLive"] as const;
+
+  const items: Step[] = steps ?? stepKeys.map((key) => ({
+    num: t(`${key}.num`),
+    title: t(`${key}.title`),
+    desc: t(`${key}.desc`),
+  }));
+
   return (
-    <section id="how" className="max-w-[960px] mx-auto px-6 md:px-12 py-20 md:py-24">
-      <SectionLabel>How it works</SectionLabel>
+    <section id="how" className="max-w-240 mx-auto px-6 md:px-12 py-20 md:py-24">
+      <SectionLabel>{label ?? t("label")}</SectionLabel>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
-        {steps.map((step) => (
+        {items.map((step) => (
           <div key={step.num}>
             <div className="font-serif text-sm font-light text-muted mb-5">
               {step.num}
             </div>
             <div className="font-serif text-xl font-light tracking-tight text-primary mb-3 leading-snug">
-              {step.title} <em>{step.em}</em>
+              {step.title}
             </div>
             <p className="text-sm font-light text-muted leading-relaxed">
               {step.desc}

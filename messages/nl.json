@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "login": "Inloggen",
+    "getStarted": "Aan de slag"
+  },
+  "hero": {
+    "badge": "Simpel. Snel. Van jou.",
+    "title": "Jouw pagina,\nlive in minuten.",
+    "subtitle": "Claim je slug, bouw je pagina, publiceer voor $1. Geen abonnement, geen gedoe.",
+    "cta": "Claim je slug",
+    "placeholder": "jounaam"
+  },
+  "howItWorks": {
+    "label": "Hoe het werkt",
+    "pickSlug": {
+      "num": "01",
+      "title": "Kies je slug",
+      "desc": "Kies een unieke URL die bij jou past. Je naam, je merk, je studio — wat ook maar klopt."
+    },
+    "buildPage": {
+      "num": "02",
+      "title": "Bouw je pagina",
+      "desc": "Voeg je headline, omschrijving en een call-to-action toe. Alles ziet er direct goed uit."
+    },
+    "goLive": {
+      "num": "03",
+      "title": "Betaal $1, ga live",
+      "desc": "Één dollar. Je pagina is voor altijd live. Deel overal — Instagram, visitekaartje, email."
+    }
+  },
+  "features": {
+    "label": "Waarom SlugPage",
+    "instantPublishing": {
+      "title": "Direct publiceren",
+      "desc": "Van idee naar live pagina in minder dan een minuut. Geen setup, geen config, geen wachten."
+    },
+    "memorableUrl": {
+      "title": "Makkelijk te onthouden URL",
+      "desc": "Een nette link op slugpage.com/jounaam. Makkelijk te onthouden, makkelijk te delen."
+    },
+    "editAnytime": {
+      "title": "Altijd gratis bewerken",
+      "desc": "De $1 is een eenmalige publicatievergoeding — alle bewerkingen daarna zijn altijd gratis."
+    },
+    "mobileReady": {
+      "title": "Mobiel klaar",
+      "desc": "Elke pagina ziet er geweldig uit op elk apparaat. Je bezoekers krijgen overal een perfecte ervaring."
+    }
+  },
+  "cta": {
+    "label": "Aan de slag",
+    "title": "Eén dollar.<br></br><em>Jouw pagina, <success>live.</success></em>",
+    "subtitle": "Geen abonnement. Geen gedoe. Bouw, betaal eenmalig en deel je link.",
+    "cta": "Claim je slug →"
+  },
+  "footer": {
+    "tagline": "Jouw pagina, live in minuten.",
+    "legal": "© {year} SlugPage. Alle rechten voorbehouden."
+  }
+}

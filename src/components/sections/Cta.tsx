@@ -1,17 +1,43 @@
+import { useTranslations } from "next-intl";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/shared/SectionLabel";
 
-export default function CtaSection() {
+interface CtaSectionProps {
+  label?: string;
+  title?: string;
+  subtitle?: string;
+  cta?: string;
+  ctaHref?: string;
+}
+
+export default function CtaSection({
+  label,
+  title,
+  subtitle,
+  cta,
+  ctaHref = "/signup",
+}: CtaSectionProps) {
+  const t = useTranslations("cta");
+
   return (
-    <section className="text-center max-w-[960px] mx-auto px-6 md:px-12 py-24 md:py-32">
-      <SectionLabel className="justify-center flex">Get started</SectionLabel>
+    <section className="text-center max-w-240 mx-auto px-6 md:px-12 py-24 md:py-32">
+      <SectionLabel className="justify-center flex text-success">
+        {label ?? t("label")}
+      </SectionLabel>
       <h2 className="font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light tracking-tight leading-tight text-primary mb-4">
-        One dollar.<br /><em>Your page, live.</em>
+        {title ??
+          t.rich("title", {
+            em: (chunks) => <em>{chunks}</em>,
+            br: () => <br />,
+            success: (chunks) => <span className="text-success">{chunks}</span>,
+          })}
       </h2>
       <p className="text-base font-light text-muted mb-10 leading-relaxed">
-        No subscription. No setup. Just build, pay once, and share your link.
+        {subtitle ?? t("subtitle")}
       </p>
-      <Button href="/signup" size="lg">Claim your slug →</Button>
+      <Button href={ctaHref} size="lg">
+        {cta ?? t("cta")}
+      </Button>
     </section>
   );
 }

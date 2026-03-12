@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "login": "Log in",
+    "getStarted": "Get started"
+  },
+  "hero": {
+    "badge": "Simple. Fast. Yours.",
+    "title": "Your page,\nlive in minutes.",
+    "subtitle": "Claim your slug, build your page, publish for $1. No subscriptions, no complexity.",
+    "cta": "Claim your slug",
+    "placeholder": "yourname"
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "pickSlug": {
+      "num": "01",
+      "title": "Pick your slug",
+      "desc": "Choose a unique URL that represents you. Your name, your brand, your studio — whatever fits."
+    },
+    "buildPage": {
+      "num": "02",
+      "title": "Build your page",
+      "desc": "Add your headline, description, and a call-to-action. Everything looks great out of the box."
+    },
+    "goLive": {
+      "num": "03",
+      "title": "Pay $1, go live",
+      "desc": "One dollar. Your page is live forever. Share anywhere — Instagram, business card, email."
+    }
+  },
+  "general": {
+    "claim": "Claim"
+  },
+  "browserMockup": {
+    "eyebrow": "Nail Studio Rosa · Amsterdam",
+    "title": "Welcome to<br></br><em>Nail Studio Rosa</em> 💅",
+    "desc": "Professional nail care in the heart of Amsterdam. Book your appointment now.",
+    "cta": "Book appointment →"
+  },
+  "proofStrip": {
+    "cost": { "value": "$1", "label": "one-time cost" },
+    "speed": { "value": "< 1 min", "label": "to go live" },
+    "edits": { "value": "∞", "label": "free to edit" },
+    "skills": { "value": "0", "label": "technical skills needed" }
+  },
+  "features": {
+    "label": "Why SlugPage",
+    "instantPublishing": {
+      "title": "Instant publishing",
+      "desc": "From idea to live page in under a minute. No setup, no config, no waiting."
+    },
+    "memorableUrl": {
+      "title": "Memorable URL",
+      "desc": "A clean link at slugpage.com/yourname. Easy to remember, easy to share."
+    },
+    "editAnytime": {
+      "title": "Edit anytime, free",
+      "desc": "The $1 is a one-time publish fee — all edits after that are always free."
+    },
+    "mobileReady": {
+      "title": "Mobile ready",
+      "desc": "Every page looks great on any device. Your visitors get a perfect experience everywhere."
+    }
+  },
+  "cta": {
+    "label": "Get started",
+    "title": "One dollar.<br></br><em>Your page, <success>live.</success></em>",
+    "subtitle": "No subscription. No setup. Just build, pay once, and share your link.",
+    "cta": "Claim your slug →"
+  },
+  "footer": {
+    "tagline": "Your page, live in minutes.",
+    "legal": "© {year} SlugPage. All rights reserved."
+  }
+}
