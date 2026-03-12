@@ -1,0 +1,32 @@
+import Button from "@/components/ui/Button";
+
+export default function BrowserMockup() {
+  return (
+    <div className="mt-20 w-full max-w-[680px]">
+      <div className="bg-background border border-border rounded-xl shadow-[0_32px_80px_rgba(0,0,0,0.08)] overflow-hidden">
+        {/* Browser bar */}
+        <div className="bg-surface border-b border-border px-4 py-3 flex items-center gap-2">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
+          <div className="flex-1 bg-background border border-border rounded-md px-3 py-1 mx-2 text-[0.68rem] text-muted text-center">
+            slugpage.com/nagelstudio
+          </div>
+        </div>
+        {/* Page preview */}
+        <div className="px-8 md:px-12 py-12 md:py-16 text-left">
+          <p className="text-xs font-medium tracking-widest uppercase text-muted mb-3">
+            Nagelstudio Rosa · Amsterdam
+          </p>
+          <h2 className="font-serif text-2xl md:text-[2rem] font-light tracking-tight leading-snug text-primary mb-3">
+            Welkom bij<br /><em>Nagelstudio Rosa</em> 💅
+          </h2>
+          <p className="text-sm font-light text-muted leading-relaxed mb-6 max-w-sm">
+            Professionele nagelverzorging in het hart van Amsterdam. Maak nu een afspraak.
+          </p>
+          <Button size="sm">Afspraak maken →</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
