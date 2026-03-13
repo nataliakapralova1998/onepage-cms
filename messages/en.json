@@ -4,11 +4,11 @@
     "getStarted": "Get started"
   },
   "hero": {
-    "badge": "Simple. Fast. Yours.",
-    "title": "Your page,\nlive in minutes.",
-    "subtitle": "Claim your slug, build your page, publish for $1. No subscriptions, no complexity.",
-    "cta": "Claim your slug",
-    "placeholder": "yourname"
+    "badge": "$1 · one minute · live forever",
+    "titleLine1": "Your page.",
+    "titleLine2": "One link.",
+    "subtitle": "Build a page, pick your slug, pay one dollar. No subscriptions, no setup, no technical knowledge needed.",
+    "tagline": "Free to build · $1 to publish"
   },
   "howItWorks": {
     "label": "How it works",

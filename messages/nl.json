@@ -5,10 +5,10 @@
   },
   "hero": {
     "badge": "Simpel. Snel. Van jou.",
-    "title": "Jouw pagina,\nlive in minuten.",
+    "titleLine1": "Jouw pagina.",
+    "titleLine2": "Live in minuten.",
     "subtitle": "Claim je slug, bouw je pagina, publiceer voor $1. Geen abonnement, geen gedoe.",
-    "cta": "Claim je slug",
-    "placeholder": "jounaam"
+    "tagline": "Gratis bouwen · $1 om te publiceren"
   },
   "howItWorks": {
     "label": "Hoe het werkt",
@@ -27,6 +27,21 @@
       "title": "Betaal $1, ga live",
       "desc": "Één dollar. Je pagina is voor altijd live. Deel overal — Instagram, visitekaartje, email."
     }
+  },
+  "general": {
+    "claim": "Claim"
+  },
+  "browserMockup": {
+    "eyebrow": "Nagelstudio Rosa · Amsterdam",
+    "title": "Welkom bij<br></br><em>Nagelstudio Rosa</em> 💅",
+    "desc": "Professionele nagelverzorging in het hart van Amsterdam. Maak nu een afspraak.",
+    "cta": "Afspraak maken →"
+  },
+  "proofStrip": {
+    "cost": { "value": "$1", "label": "eenmalige kosten" },
+    "speed": { "value": "< 1 min", "label": "om live te gaan" },
+    "edits": { "value": "∞", "label": "gratis bewerken" },
+    "skills": { "value": "0", "label": "technische kennis nodig" }
   },
   "features": {
     "label": "Waarom SlugPage",

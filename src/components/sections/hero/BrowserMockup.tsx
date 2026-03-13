@@ -10,13 +10,13 @@ export default function BrowserMockup({ slug }: BrowserMockupProps) {
   const displaySlug = slug?.trim() || "nagelstudio";
 
   return (
-    <div className="mt-20 w-full max-w-[680px]">
+    <div className="mt-20 w-full max-w-170">
       <div className="bg-background border border-border rounded-xl shadow-[0_32px_80px_rgba(0,0,0,0.08)] overflow-hidden">
         <div className="bg-surface border-b border-border px-4 py-3 flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
           <div className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
           <div className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-          <div className="flex-1 bg-background border border-border rounded-md px-3 py-1 mx-2 text-[0.68rem] text-muted text-center">
+          <div className="flex-1 bg-background border border-border rounded-md px-3 py-1 mx-2 text-[0.68rem] text-black text-center">
             slugpage.com/{displaySlug}
           </div>
         </div>

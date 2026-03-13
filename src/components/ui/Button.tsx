@@ -5,9 +5,10 @@ type ButtonProps = {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   className?: string;
+  disabled?:boolean;
 };
 
 export default function Button({
@@ -16,14 +17,14 @@ export default function Button({
   onClick,
   variant = "primary",
   size = "md",
+  disabled,
   className,
 }: ButtonProps) {
-  const base = "inline-flex items-center gap-2 rounded-full font-medium transition-opacity hover:opacity-70 cursor-pointer";
+  const base = "inline-flex items-center gap-2 rounded-full font-medium cursor-pointer transition-all duration-150";
 
   const variants = {
-    primary: "bg-primary text-primary-foreground",
-    secondary: "bg-secondary text-secondary-foreground border border-border",
-    ghost: "text-muted hover:text-primary",
+    primary: "bg-primary text-primary-foreground hover:opacity-70",
+    secondary: "bg-transparent text-primary border border-border hover:border-primary",
   };
 
   const sizes = {
@@ -35,5 +36,5 @@ export default function Button({
   const classes = cn(base, variants[variant], sizes[size], className);
 
   if (href) return <Link href={href} className={classes}>{children}</Link>;
-  return <button type="button" onClick={onClick} className={classes}>{children}</button>;
+  return <button disabled={disabled} type="button" onClick={onClick} className={classes}>{children}</button>;
 }

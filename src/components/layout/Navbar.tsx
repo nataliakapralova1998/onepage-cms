@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
+import LanguageSelector from "./LanguageSelector";
 
 const links = [
   { label: "How it works", href: "#how" },
@@ -20,37 +21,38 @@ export default function Navbar() {
           <Link href="/" className="font-serif text-lg tracking-tight">
             SlugPage
           </Link>
-
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
+          
+  {/* Desktop links */}
+         
+          <div className="hidden md:flex items-center gap-6">
+            {links.map((link) => (
               <a
-                key={l.href}
-                href={l.href}
+                key={link.href}
+                href={link.href}
                 className="text-sm text-muted hover:text-primary transition-colors"
               >
-                {l.label}
+                {link.label}
               </a>
             ))}
-            <Button href="/login" variant="ghost">
+          </div>
+
+          {/* Desktop right */}
+          <div className="hidden md:flex items-center gap-4">
+            <LanguageSelector />
+            <Button href="/login" variant="secondary">
               Log in
             </Button>
             <Button href="/signup">Get started</Button>
           </div>
-
-          {/* Hamburger */}
+         
           <button
             type="button"
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex flex-col justify-center gap-1.5 p-2 -mr-2"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
             <motion.span
-              animate={
-                open
-                  ? { translateY: 8, rotate: 45 }
-                  : { translateY: 0, rotate: 0 }
-              }
+              animate={open ? { translateY: 6, rotate: 45 } : { translateY: 0, rotate: 0 }}
               transition={{ duration: 0.2 }}
               className="block w-5 h-px bg-primary origin-center"
             />
@@ -60,11 +62,7 @@ export default function Navbar() {
               className="block w-5 h-px bg-primary"
             />
             <motion.span
-              animate={
-                open
-                  ? { translateY: -8, rotate: -45 }
-                  : { translateY: 0, rotate: 0 }
-              }
+              animate={open ? { translateY: -6, rotate: -45 } : { translateY: 0, rotate: 0 }}
               transition={{ duration: 0.2 }}
               className="block w-5 h-px bg-primary origin-center"
             />
@@ -80,20 +78,20 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed inset-0 z-40 bg-background flex flex-col px-6 pt-20 pb-12 md:hidden"
+            className="fixed inset-0 z-40 bg-background flex flex-col px-6 pt-24 pb-12 md:hidden"
           >
             <div className="flex flex-col gap-1 flex-1">
-              {links.map((l, i) => (
+              {links.map((link, index) => (
                 <motion.a
-                  key={l.href}
-                  href={l.href}
+                  key={link.href}
+                  href={link.href}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.06, duration: 0.2 }}
+                  transition={{ delay: index * 0.06, duration: 0.2 }}
                   className="font-serif text-3xl font-light tracking-tight text-primary py-4 border-b border-border hover:text-muted transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  {l.label}
+                  {link.label}
                 </motion.a>
               ))}
             </div>
@@ -104,11 +102,8 @@ export default function Navbar() {
               transition={{ delay: 0.18, duration: 0.2 }}
               className="flex flex-col gap-3"
             >
-              <Button
-                href="/login"
-                variant="secondary"
-                className="w-full justify-center py-3"
-              >
+              <LanguageSelector />
+              <Button href="/login" variant="secondary" className="w-full justify-center py-3">
                 Log in
               </Button>
               <Button href="/signup" className="w-full justify-center py-3">
