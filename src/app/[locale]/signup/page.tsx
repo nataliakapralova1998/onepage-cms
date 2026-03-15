@@ -126,10 +126,10 @@ export default function SignUp() {
         ) : (
           <SignUpScreen
             content={{
-              emailLabel: t("emailLabel"),
-              emailPlaceholder: t("emailPlaceholder"),
-              submitLabel: t("submit"),
-              submittingLabel: t("submitting"),
+              emailLabel: tGeneral("emailLabel"),
+              emailPlaceholder: tGeneral("emailPlaceholder"),
+              submitLabel: tGeneral("sendMagicLink"),
+              submittingLabel: tGeneral("sending"),
               dividerLabel: tGeneral("or"),
             }}
             state={{

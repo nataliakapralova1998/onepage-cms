@@ -1,4 +1,44 @@
 {
+  "general": {
+    "claim": "Claim",
+    "yourname": "yourname",
+    "login": "Log in",
+    "or": "or",
+    "available": "· available ✓",
+    "taken": "· taken ✗",
+    "checking": "· checking…",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "emailError": "Please enter a valid email address.",
+    "sendMagicLink": "Send magic link →",
+    "sending": "Sending…",
+    "yourSlug": "Your slug"
+  },
+  "dashboard": {
+    "title": "Your <em>pages</em>",
+    "newPage": "New page",
+    "published": "Published",
+    "draft": "Draft",
+    "edit": "Edit",
+    "view": "View",
+    "cancel": "Cancel",
+    "startBuilding": "Start building →",
+    "emptyTitle": "No pages <em>yet</em>",
+    "emptySubtitle": "Create your first page and share your link with the world.",
+    "emptyButtonLabel": "Create your first page",
+    "modalTitle": "New <em>page</em>",
+    "modalSubtitle": "Pick your slug — you can always change it later before publishing."
+  },
+  "login": {
+    "navHint": "Don't have an account?",
+    "navLink": "Sign up",
+    "eyebrow": "Welcome back",
+    "titleLine1": "Log",
+    "titleLine2": "in",
+    "subtitle": "Enter your email and we'll send you a magic link — no password needed.",
+    "signupPrompt": "Don't have an account yet?",
+    "signupLink": "Sign up"
+  },
   "nav": {
     "login": "Log in",
     "getStarted": "Get started"
@@ -28,14 +68,6 @@
       "title": "Pay $1, go live",
       "desc": "One dollar. Your page is live forever. Share anywhere — Instagram, business card, email."
     }
-  },
-  "general": {
-    "claim": "Claim",
-    "or": "or",
-    "available": "· available ✓",
-    "taken": "· taken ✗",
-    "checking": "· checking…",
-    "yourname": "yourname"
   },
   "browserMockup": {
     "eyebrow": "Nail Studio Rosa · Amsterdam",

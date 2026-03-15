@@ -21,9 +21,8 @@ export default function Navbar() {
           <Link href="/" className="font-serif text-lg tracking-tight">
             SlugPage
           </Link>
-          
-  {/* Desktop links */}
-         
+
+          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6">
             {links.map((link) => (
               <a
@@ -44,7 +43,7 @@ export default function Navbar() {
             </Button>
             <Button href="/signup">Get started</Button>
           </div>
-         
+
           <button
             type="button"
             className="md:hidden flex flex-col justify-center gap-1.5 p-2 -mr-2"
@@ -52,7 +51,11 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <motion.span
-              animate={open ? { translateY: 6, rotate: 45 } : { translateY: 0, rotate: 0 }}
+              animate={
+                open
+                  ? { translateY: 6, rotate: 45 }
+                  : { translateY: 0, rotate: 0 }
+              }
               transition={{ duration: 0.2 }}
               className="block w-5 h-px bg-primary origin-center"
             />
@@ -62,7 +65,11 @@ export default function Navbar() {
               className="block w-5 h-px bg-primary"
             />
             <motion.span
-              animate={open ? { translateY: -6, rotate: -45 } : { translateY: 0, rotate: 0 }}
+              animate={
+                open
+                  ? { translateY: -6, rotate: -45 }
+                  : { translateY: 0, rotate: 0 }
+              }
               transition={{ duration: 0.2 }}
               className="block w-5 h-px bg-primary origin-center"
             />
@@ -103,7 +110,11 @@ export default function Navbar() {
               className="flex flex-col gap-3"
             >
               <LanguageSelector />
-              <Button href="/login" variant="secondary" className="w-full justify-center py-3">
+              <Button
+                href="/login"
+                variant="secondary"
+                className="w-full justify-center py-3"
+              >
                 Log in
               </Button>
               <Button href="/signup" className="w-full justify-center py-3">

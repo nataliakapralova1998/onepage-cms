@@ -1,4 +1,42 @@
 {
+  "general": {
+    "claim": "Claim",
+    "or": "of",
+    "yourname": "jounaam",
+    "available": "· beschikbaar ✓",
+    "taken": "· bezet ✗",
+    "checking": "· controleren…",
+    "emailLabel": "E-mailadres",
+    "emailPlaceholder": "jij@voorbeeld.nl",
+    "emailError": "Vul een geldig e-mailadres in.",
+    "sendMagicLink": "Stuur magic link →",
+    "sending": "Versturen…"
+  },
+  "dashboard": {
+    "title": "Jouw <em>pagina's</em>",
+    "newPage": "Nieuwe pagina",
+    "published": "Gepubliceerd",
+    "draft": "Concept",
+    "edit": "Bewerken",
+    "view": "Bekijken",
+    "cancel": "Annuleren",
+    "startBuilding": "Begin met bouwen →",
+    "emptyTitle": "Nog geen <em>pagina's</em>",
+    "emptySubtitle": "Maak je eerste pagina en deel je link met de wereld.",
+    "emptyButtonLabel": "Maak je eerste pagina",
+    "modalTitle": "Nieuwe <em>pagina</em>",
+    "modalSubtitle": "Kies je slug — je kunt dit altijd wijzigen voor het publiceren."
+  },
+  "login": {
+    "navHint": "Nog geen account?",
+    "navLink": "Aanmelden",
+    "eyebrow": "Welkom terug",
+    "titleLine1": "Log",
+    "titleLine2": "in",
+    "subtitle": "Vul je e-mailadres in en we sturen je een magic link — geen wachtwoord nodig.",
+    "signupPrompt": "Nog geen account?",
+    "signupLink": "Aanmelden"
+  },
   "nav": {
     "login": "Inloggen",
     "getStarted": "Aan de slag"
@@ -32,15 +70,12 @@
     "hint": "Heb je al een account?",
     "linkLabel": "Inloggen"
   },
-  "general": {
-    "claim": "Claim",
-    "or": "of"
-  },
   "browserMockup": {
     "eyebrow": "Nagelstudio Rosa · Amsterdam",
     "title": "Welkom bij<br></br><em>Nagelstudio Rosa</em> 💅",
     "desc": "Professionele nagelverzorging in het hart van Amsterdam. Maak nu een afspraak.",
-    "cta": "Afspraak maken →"
+    "cta": "Afspraak maken →",
+    "nailstudio": "nagelstudio"
   },
   "proofStrip": {
     "cost": { "value": "$1", "label": "eenmalige kosten" },

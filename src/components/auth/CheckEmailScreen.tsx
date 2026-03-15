@@ -73,7 +73,7 @@ export default function CheckEmailScreen({
         <button
           type="button"
           onClick={onBack}
-          className="w-full text-center text-xs text-muted hover:text-primary transition-colors bg-transparent border-none py-2"
+          className="w-full text-center cursor-pointer text-xs text-muted hover:text-primary transition-colors bg-transparent border-none py-2"
         >
           {t("back")}
         </button>
