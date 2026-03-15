@@ -8,7 +8,8 @@
     "titleLine1": "Your page.",
     "titleLine2": "One link.",
     "subtitle": "Build a page, pick your slug, pay one dollar. No subscriptions, no setup, no technical knowledge needed.",
-    "tagline": "Free to build · $1 to publish"
+    "tagline": "Free to build · $1 to publish",
+    "claim": "Claim"
   },
   "howItWorks": {
     "label": "How it works",
@@ -29,13 +30,19 @@
     }
   },
   "general": {
-    "claim": "Claim"
+    "claim": "Claim",
+    "or": "or",
+    "available": "· available ✓",
+    "taken": "· taken ✗",
+    "checking": "· checking…",
+    "yourname": "yourname"
   },
   "browserMockup": {
     "eyebrow": "Nail Studio Rosa · Amsterdam",
     "title": "Welcome to<br></br><em>Nail Studio Rosa</em> 💅",
     "desc": "Professional nail care in the heart of Amsterdam. Book your appointment now.",
-    "cta": "Book appointment →"
+    "cta": "Book appointment →",
+    "nailstudio": "nailstudio"
   },
   "proofStrip": {
     "cost": { "value": "$1", "label": "one-time cost" },
@@ -71,5 +78,42 @@
   "footer": {
     "tagline": "Your page, live in minutes.",
     "legal": "© {year} SlugPage. All rights reserved."
+  },
+  "signup": {
+    "eyebrow": "Create your account",
+    "title": "Claim your<br></br><em>slug</em>",
+    "subtitle": "Enter your email and we'll send you a magic link — no password needed.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "emailError": "Please enter a valid email address.",
+    "submit": "Send magic link →",
+    "submitting": "Sending…",
+    "terms": "By continuing you agree to our <terms>Terms</terms> and <privacy>Privacy Policy</privacy>.",
+    "loginPrompt": "Already have an account? <link>Log in</link>"
+  },
+  "checkEmail": {
+    "title": "Check your<br></br><em>inbox</em>",
+    "subtitle": "We sent a magic link to your email. Click it to sign in and start building your page.",
+    "openEmail": { "label": "Open your email", "suffix": "from SlugPage" },
+    "clickLink": {
+      "label": "Click the magic link",
+      "suffix": "— valid for 10 minutes"
+    },
+    "landDashboard": {
+      "label": "You'll land straight on your",
+      "suffix": "dashboard"
+    },
+    "resend": "Resend email",
+    "resendCooldown": "Resend email ({seconds}s)",
+    "back": "← Use a different email"
+  },
+  "slugStatus": {
+    "available": "· available ✓",
+    "taken": "· taken ✗",
+    "checking": "· checking…"
+  },
+  "authNavbar": {
+    "hint": "Already have an account?",
+    "linkLabel": "Log in"
   }
 }

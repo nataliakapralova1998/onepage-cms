@@ -44,7 +44,7 @@ export default function LanguageSelector() {
       <button
         type="button"
         onClick={() => setIsOpen((previous) => !previous)}
-        className="flex items-center  cursor-pointer gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium text-muted bg-tag-bg border border-border hover:text-primary hover:border-primary transition-all duration-150"
+        className="flex items-center  cursor-pointer gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-muted border border-border hover:text-primary hover:border-primary"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
       >

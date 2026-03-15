@@ -7,7 +7,7 @@ type BrowserMockupProps = {
 
 export default function BrowserMockup({ slug }: BrowserMockupProps) {
   const t = useTranslations("browserMockup");
-  const displaySlug = slug?.trim() || "nagelstudio";
+  const displaySlug = slug?.trim() || t("nailstudio");
 
   return (
     <div className="mt-20 w-full max-w-170">

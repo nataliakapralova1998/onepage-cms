@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { motion, type Variants } from "framer-motion";
 import Badge from "@/components/ui/Badge";
 import BrowserMockup from "@/components/sections/hero/BrowserMockup";
-import SlugInput from "@/components/sections/hero/SlugInput";
+
+import type { AvailabilityStatus } from "@/lib/types";
+import SlugInput from "@/components/ui/SlugInputChecker";
 
 const EASE_OUT_EXPO = [0.22, 1, 0.36, 1] as const;
 
@@ -30,9 +33,45 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
-  const [slug, setSlug] = useState("");
+  const router = useRouter();
   const t = useTranslations("hero");
-  
+  const [status, setStatus] = useState<AvailabilityStatus>("idle");
+  const [value, setValue] = useState("");
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+
+    if (!value || value.length < 2) {
+      setStatus("idle");
+      return;
+    }
+
+    setStatus("checking");
+
+    debounceRef.current = setTimeout(async () => {
+      try {
+        const response = await fetch(`/api/slugs/check?slug=${encodeURIComponent(value)}`);
+        const data = await response.json();
+        setStatus(data.available ? "available" : "taken");
+      } catch {
+        // Fallback for demo/dev 
+        const takenSlugs = ["admin", "app", "login", "signup", "dashboard"];
+        setStatus(takenSlugs.includes(value.toLowerCase()) ? "taken" : "available");
+      }
+    }, 500);
+
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, [value]);
+
+  const handleClaim = () => {
+    if (status !== "available") return;
+    const trimmed = value.trim();
+    if (trimmed) router.push(`/signup?slug=${encodeURIComponent(trimmed)}`);
+    else router.push("/signup");
+  };
 
   return (
     <section className="min-h-screen flex items-center px-6 pt-24 pb-12 overflow-hidden">
@@ -43,8 +82,7 @@ export default function Hero() {
         <div
           className="w-225 h-150 rounded-full opacity-35"
           style={{
-            background:
-              "radial-gradient(ellipse at center, #e8e8e8 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, #e8e8e8 0%, transparent 70%)",
             transform: "translateY(-80px)",
             filter: "blur(40px)",
           }}
@@ -85,11 +123,16 @@ export default function Hero() {
           </motion.p>
 
           <motion.div className="w-full max-w-sm" variants={fadeUp}>
-            <SlugInput value={slug} onChange={setSlug} />
+            <SlugInput
+              value={value}
+              status={status}
+              onChange={setValue}
+              onClaim={handleClaim}
+            />
           </motion.div>
         </motion.div>
 
-        <BrowserMockup slug={slug} />
+        <BrowserMockup slug={value} />
       </div>
     </section>
   );

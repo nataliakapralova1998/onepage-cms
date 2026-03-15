@@ -28,8 +28,13 @@
       "desc": "Één dollar. Je pagina is voor altijd live. Deel overal — Instagram, visitekaartje, email."
     }
   },
+  "authNavbar": {
+    "hint": "Heb je al een account?",
+    "linkLabel": "Inloggen"
+  },
   "general": {
-    "claim": "Claim"
+    "claim": "Claim",
+    "or": "of"
   },
   "browserMockup": {
     "eyebrow": "Nagelstudio Rosa · Amsterdam",
@@ -71,5 +76,35 @@
   "footer": {
     "tagline": "Jouw pagina, live in minuten.",
     "legal": "© {year} SlugPage. Alle rechten voorbehouden."
+  },
+  "signup": {
+    "eyebrow": "Maak je account aan",
+    "title": "Claim je<br></br><em>slug</em>",
+    "subtitle": "Vul je e-mailadres in en we sturen je een magic link — geen wachtwoord nodig.",
+    "emailLabel": "E-mailadres",
+    "emailPlaceholder": "jij@voorbeeld.nl",
+    "emailError": "Vul een geldig e-mailadres in.",
+    "submit": "Stuur magic link →",
+    "submitting": "Versturen…",
+    "terms": "Door verder te gaan ga je akkoord met onze <terms>Voorwaarden</terms> en <privacy>Privacybeleid</privacy>.",
+    "loginPrompt": "Heb je al een account? <link>Inloggen</link>"
+  },
+  "checkEmail": {
+    "title": "Check je<br></br><em>inbox</em>",
+    "subtitle": "We hebben een magic link naar je e-mail gestuurd. Klik erop om in te loggen en je pagina te bouwen.",
+    "openEmail": { "label": "Open je e-mail", "suffix": "van SlugPage" },
+    "clickLink": {
+      "label": "Klik op de magic link",
+      "suffix": "— geldig voor 10 minuten"
+    },
+    "landDashboard": { "label": "Je komt direct op je", "suffix": "dashboard" },
+    "resend": "E-mail opnieuw versturen",
+    "resendCooldown": "E-mail opnieuw versturen ({seconds}s)",
+    "back": "← Gebruik een ander e-mailadres"
+  },
+  "slugStatus": {
+    "available": "· beschikbaar ✓",
+    "taken": "· bezet ✗",
+    "checking": "· controleren…"
   }
 }
